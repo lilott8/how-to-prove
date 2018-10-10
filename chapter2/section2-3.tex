@@ -2,71 +2,72 @@
 % Minimalists Report template
 % Author: Sibi <sibi@psibi.in>
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass{article}
-\usepackage{graphicx}
-\usepackage{verbatim}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\begin{document}
-\title{Chapter 2 (Section 2.3)}
-\author{Sibi}
-\date{\today}
-\maketitle
-\newpage
+\begin{questions}
 
-\section{Problem 1}
+\subsection{Section 3: ---}
 
-\begin{center}
-(1.1) $F \subseteq \wp(A)$
-\end{center}  
-\begin{align*}
-\forall x (x \in F \implies x \in \wp(A)) \\
-\forall x (x \in F \implies x \subseteq A) \\
-\forall x (x \in F \implies \forall y (y \in x \implies y \in A)) 
-\end{align*}
+%====================================================================================================
+\subsubsection{Exercise 1}
+\question Analyze the logical forms of the following statements. You may use the
+symbols: $\in, \neq, =, \wedge, \vee, \rightarrow, \leftrightarrow, \forall, \exists$.  You may not use: $\subset, \subseteq, P, \cup, \cap, \/, \{, \}, \neg$.  (Thus, you must write out the definitions
+of some set theory notation, and you must use equivalences to get rid of
+any occurrences of $\neg$.)
+\begin{parts}
+    \part $F \subseteq \wp(A)$
+    \part $A \subseteq \{2n + 1 | n \in \mathbb{N}\}$
+    \part $\{n^2 + n + 1 | n \in \mathbb{N} \} \subseteq \{2n + 1 | n \in \mathbb{N} \}$
+    \part $\wp(\cup_{i \in I} A_i) \nsubseteq \cup_{i \in I} \wp(A_i)$
+\end{parts}
 
-\begin{center}
-(1.2) $A \subseteq \{2n + 1 | n \in \mathbb{N}\}$ \\
-\end{center}
-\begin{align*}
-\forall x (x \in A \implies x \in \{2n + 1 | n \in \mathbb{N}\}) \\
-\forall x (x \in A \implies \exists n \in \mathbb{N} (x=2n+1))
-\end{align*}
+\begin{solution}
+    \begin{enumerate}[label=(\alph*)]
+    \item {
+        \begin{align*}
+        \forall x (x \in F \implies x \in \wp(A)) \\
+        \forall x (x \in F \implies x \subseteq A) \\
+        \forall x (x \in F \implies \forall y (y \in x \implies y \in A))
+        \end{align*}
+    }
 
-\begin{center}
-(1.3) $\{n^2 + n + 1 | n \in \mathbb{N} \} \subseteq \{2n + 1 | n \in \mathbb{N} \}$ \\
-\end{center}
-\begin{align*}
-\forall x (x \in \left\{n^2 + n + 1 \mid n \in \mathbb{N} \right\}) \implies (x \in \left\{2n + 1 \mid n \in \mathbb{N} \right\}) \\
-\forall x (\exists n \in \mathbb{N} (x = n^2 + n + 1)) \implies (\exists n \in \mathbb{N} (x=2n+1)) \\
-\end{align*}
+    \item {
+        \begin{align*}
+        \forall x (x \in A \implies x \in \{2n + 1 | n \in \mathbb{N}\}) \\
+        \forall x (x \in A \implies \exists n \in \mathbb{N} (x=2n+1))
+        \end{align*}
+    }
+    \item {
+        \begin{align*}
+        \forall x (x \in \left\{n^2 + n + 1 \mid n \in \mathbb{N} \right\}) \implies (x \in \left\{2n + 1 \mid n \in \mathbb{N} \right\}) \\
+        \forall x (\exists n \in \mathbb{N} (x = n^2 + n + 1)) \implies (\exists n \in \mathbb{N} (x=2n+1))
+        \end{align*}
+    }
+    \item {
+        \begin{align*}
+        \exists x(x \in \wp(\cup_{i \in I} A_i) \land x \notin \cup_{i \in I} \wp(A_i)) \\
+        \exists x(x \subseteq \cup_{i \in I} A_i \land x \notin \cup_{i \in I} \wp(A_i)) \\
+        \exists x( \forall y (y \in x \implies y \in \cup_{i \in I} A_i) \land
+        x \notin \cup_{i \in I} \wp(A_i)) \\
+        \exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
+        \land x \notin \cup_{i \in I} \wp(A_i)) \\
+        \exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
+        \land \neg (x \in \cup_{i \in I} \wp(A_i))) \\
+        \exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
+        \land \neg (\exists i \in I(x \in \wp(A_i)))) \\
+        \exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
+        \land \neg (\exists i \in I(x \subseteq A_i))) \\
+        \exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
+        \land \neg (\exists i \in I(\forall z (z \in x \implies z \in A_i)))) \\
+        \exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
+        \land (\forall i \in I(\exists z \neg(z \in x \implies z \in A_i)))) \\
+        \exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
+        \land (\forall i \in I(\exists z (z \in x \land \neg(z \in A_i))))) \\
+        \end{align*}
+    }
+    \end{enumerate}
+\end{solution}
 
-\begin{center}
-(1.4) $\wp(\cup_{i \in I} A_i) \nsubseteq \cup_{i \in I} \wp(A_i)$
-\end{center}
-\begin{align*}
-\exists x(x \in \wp(\cup_{i \in I} A_i) \land x \notin \cup_{i \in I} \wp(A_i)) \\
-\exists x(x \subseteq \cup_{i \in I} A_i \land x \notin \cup_{i \in I} \wp(A_i)) \\
-\exists x( \forall y (y \in x \implies y \in \cup_{i \in I} A_i) \land
-x \notin \cup_{i \in I} \wp(A_i)) \\
-\exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
-\land x \notin \cup_{i \in I} \wp(A_i)) \\
-\exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
-\land \neg (x \in \cup_{i \in I} \wp(A_i))) \\
-\exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
-\land \neg (\exists i \in I(x \in \wp(A_i)))) \\
-\exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
-\land \neg (\exists i \in I(x \subseteq A_i))) \\
-\exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
-\land \neg (\exists i \in I(\forall z (z \in x \implies z \in A_i)))) \\
-\exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
-\land (\forall i \in I(\exists z \neg(z \in x \implies z \in A_i)))) \\
-\exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
-\land (\forall i \in I(\exists z (z \in x \land \neg(z \in A_i))))) \\
-\end{align*}
-
-\section{Problem 2}
+%====================================================================================================
+\subsubsection{Exercise 2}
 \begin{center}
 (2.1) $x \in \cup F \setminus \cup G $
 \end{center}
@@ -99,12 +100,14 @@ x \in \cup F \land x \notin \cup G \\
 \forall i \in I(x \in A_i)) \lor (\forall i \in I(x \in B_i)
 \end{align*}
 
-\section{Problem 3}
+%====================================================================================================
+\subsubsection{Exercise 3}
 \begin{align*}
   \left\{\left\{\varnothing\right\}, \varnothing \right\}
 \end{align*}
 
-\section{Problem 4}
+%====================================================================================================
+\subsubsection{Exercise 4}
 \begin{align*}
   F = \left\{ \left\{red, green, blue \right\}, \left\{orange, red,
   green\right\}, \left\{purple, red, green, blue \right\} \right\} \\
@@ -112,7 +115,8 @@ x \in \cup F \land x \notin \cup G \\
   \cap F = \left\{ red, green\right\} \\
 \end{align*}
 
-\section{Problem 5}
+%====================================================================================================
+\subsubsection{Exercise 5}
 \begin{align*}
   F = \left\{ \left\{3,7,12 \right\}, \left\{5,7,16
   \right\}, \left\{5,12,23 \right\} \right\} \\
@@ -120,7 +124,8 @@ x \in \cup F \land x \notin \cup G \\
   \cap F = \varnothing \\
 \end{align*}
 
-\section{Problem 6}
+%====================================================================================================
+\subsubsection{Exercise 6}
 \begin{center}
   $I = \left\{2,3,4,5\right\}$ \\
   $A_i = \left\{i, i+1, i-1, 2*i\right\}$ \\
@@ -134,10 +139,12 @@ x \in \cup F \land x \notin \cup G \\
   \cup_{i \in I}A_i = \left\{1,2,3,4,5,6,8,10 \right\} \\
 \end{align*}
 
-\section{Problem 7}
+%====================================================================================================
+\subsubsection{Exercise 7}
 Too lazy to figure out when they live.
 Or if you want a more reasonable answer: Left as an exercise to the reader :P
-\section{Problem 8}
+%====================================================================================================
+\subsubsection{Exercise 8}
 \begin{center}
   $I = \left\{2,3\right\}$ \\
   $A_i = \left\{ i,2i \right\}$ \\
@@ -153,7 +160,8 @@ Or if you want a more reasonable answer: Left as an exercise to the reader :P
   No they are not equivalent. 2(c) and 2(d) are not equivalent to each other.
 \end{align*}
 
-\section{Problem 9}
+%====================================================================================================
+\subsubsection{Exercise 9}
 \begin{align*}
   Let X = \cup_{i \in I} (A_i \cap B_i) \\
   Let Y = (\cup_{i \in I}A_i) \cap (\cup_{i \in  I} B_i) \\ \\
@@ -169,7 +177,8 @@ $Let I = \left\{1,2\right\}$ \\
 $A_i = \left\{i\right\}$ \\
 $B_i = \left\{2i\right\}$ \\
 
-\section{Problem 10}
+%====================================================================================================
+\subsubsection{Exercise 10}
 \begin{align*}
   x \in \wp(A \cap B) \\
   x \subseteq (A \cap B) \\
@@ -184,7 +193,8 @@ $B_i = \left\{2i\right\}$ \\
   \forall y(y \in x \implies y \in A) \land \forall y(y \in x \implies y \in B) \\
 \end{align*}
 %% \left\{ \right\} 
-\section{Problem 11}
+%====================================================================================================
+\subsubsection{Exercise 11}
 \begin{align*}
  A = \left\{1 \right\} \\
  B = \left\{2 \right\} \\
@@ -192,7 +202,8 @@ $B_i = \left\{2i\right\}$ \\
  \wp(A) \cup \wp(B) = \left\{ \left\{1 \right\},\left\{2 \right\}, \varnothing  \right\} 
 \end{align*}
 
-\section{Problem 12}
+%====================================================================================================
+\subsubsection{Exercise 12}
 Probelm (a)
 \begin{align*}
   \cup_{i \in I}(A_i \cup B_i) = (\cup_{i \in I}A_i) \cup (\cup_{i \in  I}B_i) \\\\
@@ -234,7 +245,8 @@ Problem (c)
   \forall i \in I(x \in A_i) \land \forall i \in I (x \notin B_i)
 \end{align*}
 
-\section{Problem 13}
+%====================================================================================================
+\subsubsection{Exercise 13}
 $$ I = \{1,2\} $$
 $$ J = \{3,4\} $$
 $$ A_{i,j} = \{i, j, i+j\} $$
@@ -274,7 +286,8 @@ Problem (d)
   \exists i \in I(\forall j \in J(x \in A_{i,j}))\\
 \end{align*}
   No, they are not equivalent.
-\section{Problem 14}
+%====================================================================================================
+\subsubsection{Exercise 14}
 Problem (a)
 \begin{align*}
   x \in \cup F \\
@@ -294,5 +307,5 @@ Problem (b)
 Now if $F$ is $\emptyset$, then the antecedant is false. But the
 logical form is vacously true. So every element in $U$ will satisfy
 that. Therefore, $\cap \emptyset = U$
-\end{document}
 
+\end{questions}

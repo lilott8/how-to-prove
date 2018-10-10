@@ -1,0 +1,232 @@
+\subsection{Section 1: Deductive Reasoning and Logical Connectives}
+
+\begin{questions}
+
+\subsubsection{Exercise 1}
+
+\question Analyze the logical forms of the following statements:
+\begin{parts}
+    \part  We’ll have either a reading assignment or homework problems, but we
+won’t have both homework problems and a test.
+\part You won’t go skiing, or you will and there won’t be any snow.
+\part $\sqrt{7}\nleq 2$
+\end{parts}
+
+\begin{solution}
+    \begin{enumerate}[label=(\alph*)]
+        \item P:= We'll have reading assignment. \;\\
+                Q:= We'll have homework problems. \\
+                T:= We'll have test. \\
+                $(P \vee Q) \wedge \neg(Q \wedge T)$
+                
+        \item P:= You go skiing \\
+                Q:= There will be snow \\
+                $\neg P \vee (P \wedge \neg Q)$
+        \item $\sqrt{7} \nleq 2$ \\
+                P:= $\sqrt{7} < 2$ \\
+                Q:= $\sqrt{7} = 2$ \\
+                $\neg (P \vee Q)$
+    \end{enumerate}
+\end{solution}
+
+%====================================================================================================
+
+\subsubsection{Exercise 2}
+\question Analyze the logical forms of the following statements:
+
+\begin{parts}
+    \part Either John and Bill are both telling the truth, or neither of them is.
+    \part I'll have either fish or chicken, but I won’t have both fish and mashed
+potatoes.
+    \part  3 is a common divisor of 6, 9, and 15.
+\end{parts}
+
+\begin{solution}
+    \begin{enumerate}[label=(\alph*)]
+        \item J:= John is telling the truth \\
+        B:= Bill is telling the truth \\
+        $(J \wedge B) \vee (\neg J \wedge \neg B)$
+        
+        \item F:= I'll have fish \\
+        C:= I'll have chicken \\
+        P:= I'll have mashed potatoes \\
+        $(F \vee C) \wedge \neg(F \wedge P)$
+        
+        \item X:= 3 is a common divisor of 6\\
+        Y:= 3 is a common divisor of 9\\
+        Z:= 3 is a common divisor of 15\\
+        $X \wedge Y \wedge Z$
+    \end{enumerate}
+\end{solution}
+
+
+%====================================================================================================
+
+\subsubsection{Exercise 3}
+
+\question Analyze the logical forms of the following statements:
+\begin{parts}
+    \part Alice and Bob are not both in the room.
+    \part Alice and Bob are both not in the room.
+    \part Either Alice or Bob is not in the room.
+    \part Either Alice or Bob is not in the room.
+\end{parts}
+
+A:= Alice is in the room. \\
+B:= Bob is in the room.
+
+\begin{solution}
+    \begin{enumerate}[label=(\alph*)]
+        \item $A \wedge B$
+        \item $\neg (A \wedge B)$
+        \item $\neg A \vee \neg B$
+        \item $\neg A \wedge \neg B$
+    \end{enumerate}
+\end{solution}
+
+%====================================================================================================
+
+\subsubsection{Exercise 4}
+\question ...
+
+\begin{solution}
+    The two sentences that don't make sense are:
+    $\neg(P, Q, \wedge R)$ and \\
+    $(P \wedge Q)(P\vee R)$
+\end{solution}
+
+%====================================================================================================
+
+\subsubsection{Exercise 5}
+
+\question Let P:= “I will buy the pants” and \\
+    S:= “I will buy the shirt.” \\
+    What English sentences are represented by the following expressions?
+\begin{parts}
+\part $\neg(P \wedge \neg S)$
+\part $\neg P \wedge \neg S$
+\part $\neg P \vee \neg S$
+\end{parts}
+\begin{solution}
+    \begin{enumerate}[label=(\alph*)]
+        \item $P \wedge \neg S$:= I will buy the Pant but not the shirt. \\
+                            = I will buy the Pant without the shirt. \\
+                $\neg (P \wedge \neg S)$:= I won't buy the Pant without the shirt.
+        \item I will neigher buy the pants nor the shirt.
+        \item Either I won't buy the pants or wont't buy the shirt.
+    \end{enumerate}
+\end{solution}
+
+%====================================================================================================
+
+\subsubsection{Exercise 6}
+\question Let S:= “Steve is happy” and G:= “George is happy.” \\
+What English sentences are represented by the following expressions?
+
+\begin{parts}
+    \part $(S \vee G) \wedge (\neg S \vee \neg G)$
+    \part $[S \vee (G \wedge \neg S)] \vee \neg G$
+    \part $S \vee [G \wedge (\neg S \vee \neg G)]$
+\end{parts}
+
+\begin{solution}
+The best way to solve this problem are by reducing the
+expressions (\url{http://math.stackexchange.com/questions/885946/simplifying-ambiguous-statements}).
+\end{solution}
+
+
+%====================================================================================================
+
+\subsubsection{Exercise 7}
+
+\question Identify the premises and conclusions of the following deductive arguments and analyze their logical forms. Do you think the reasoning is valid?
+(Although you will have only your intuition to guide you in answering
+this last question, in the next section we will develop some techniques for
+determining the validity of arguments.)
+
+\begin{parts}
+    \part Jane and Pete won’t both win the math prize. \\
+            Pete will win either the math prize or the chemistry prize. \\
+            Jane will win the math prize. \\
+            Therefore, Pete will win the chemistry prize.
+    \part The main course will be either beef or fish. \\
+            The vegetable will be either peas or corn. \\
+            We will not have both fish as a main course and corn as a vegetable. \\
+            Therefore, we will not have both beef as a main course and peas as a vegetable.
+    \part Either John or Bill is telling the truth. \\
+            Either Sam or Bill is lying. \\
+            Therefore, either John is telling the truth or Sam is lying.
+    \part Either sales will go up and the boss will be happy, \\
+            or expenses will go up and the boss won’t be happy. \\
+            Therefore, sales and expenses will not
+both go up.
+\end{parts}
+
+\begin{solution}
+    \begin{enumerate}
+        \item 
+                J:= Jane will win the math prize \\
+                P:= Pete will win the math prize \\
+                C:= Pete will win the chemistry prize. \\
+                
+                \textbf{Premises}: \\
+                $\neg (J \wedge P)$ \\
+                $P \vee C$ \\
+                $J$ \\
+                
+                \textbf{Conclusion}: C \\
+                
+                \textbf{Reasoning is valid}: Jane has won the math prize so Pete can't win the math prize. So he can only will the chemistry prize according to the premises.
+        
+        \item 
+                B:= Beef will be the main course. \\
+                F:= Fish will be the main course. \\
+                P:= Peas will be the vegetable. \\
+                C:= Corn will be the vegetable. \\
+                
+                \textbf{Premises}: \\
+                $B \vee F$ \\
+                $P \vee C$ \\
+                $\neg(F \wedge C)$ \\
+                
+                \textbf{Conclusion}: \\
+                $\neg(B \wedge P)$ \\
+                
+                \textbf{Reasoning seems invalid}: In a case where you cannot have both fish and corn, you will end up with Beef and Peas.
+                
+        \item
+                J:= John is telling the truth. \\
+                B:= Bill is telling the truth.\\
+                S:= Sam is telling the truth.\\
+                
+                \textbf{Premises}:
+                $J \vee B$ \\
+                $\neg S \vee \neg B$ \\
+                
+                \textbf{Conclusion}: \\
+                $J \vee \neg S$\\
+                
+                \textbf{Reasoning seems valid}: $J \vee B \vee \neg S \vee \neg B$ gives $J \vee \neg S$
+                
+        \item
+                Either sales will go up and the boss will be happy, \\
+                or expenses will go up and the boss won’t be happy.\\
+                Therefore, sales and expenses will not both go up.
+                
+                S:= Sales will go up. \\
+                B:= Boss will be happy. \\
+                E:= Expenses will go up. \\
+                
+                \textbf{Premises}:
+                $(S \wedge B) \vee (E \wedge \neg B)$ \\
+                
+                \textbf{Conclusion}:
+                ¬(S ∧ E)
+                
+                \textbf{Reasoning is invalid}: When $S = T$, $E = T$, $B = T$, then premise is $true$ and conclusion is $false$.
+
+        
+    \end{enumerate}
+\end{solution}
+
+\end{questions}
