@@ -1,606 +1,710 @@
 \subsection{Section 2: Truth Tables}
 
-
 \subsubsection{Exercise 1}
-Exercise 1
------------
+\question ...
 
-a)
-
-
-    p q | (¬p ∨ q)
-    --------------
-    T T | T
-    T F | F
-    F T | T
-    F F | T
-
-
-b)
-
-    g s | ((s ∨ g) ∧ (¬s ∨ ¬g))
-    ---------------------------
-    T T | F
-    T F | T
-    F T | T
-    F F | F
+\begin{solution}
+    \begin{enumerate}
+        \item {
+            \begin{tabular}[t]{l l | l}
+            p & q & $(\neg p \vee q)$ \\ \hline
+            T & T & T \\
+            T & F & F \\
+            F & T & T \\
+            F & F & T
+            \end{tabular}
+        }
+        
+        \item{
+            \begin{tabular}[t]{l l | l}
+            g & s & $((s \vee g) \wedge (\neg s \vee \neg g))$ \\ \hline
+            T & T & T \\
+            T & F & F \\
+            F & T & T \\
+            F & F & T
+            \end{tabular}
+        }
+    \end{enumerate}
+\end{solution}
 
 %====================================================================================================
 \subsubsection{Exercise 2}
-Exercise 2
------------
+\question ...?
 
-a)
-
-    p q | ¬(p ∧ (q ∨ ¬p))
-    ---------------------
-    T T | F
-    T F | T
-    F T | T
-    F F | T
-
-b)
-
-    p q r | ((p ∨ q) ∧ (¬p ∨ r))
-    ----------------------------
-    T T T | T
-    T T F | F
-    T F T | T
-    T F F | F
-    F T T | T
-    F T F | T
-    F F T | F
-    F F F | F
+\begin{solution}
+\begin{enumerate}
+    \item{
+        \begin{tabular}[c]{l l |l}
+        p & q & $\neg (p \wedge (q \vee \neg p))$ \\ \hline
+        T & T & F \\
+        T & F & T \\
+        F & T & T \\
+        F & F & T
+        \end{tabular}
+    }
+    
+    \item{
+        \begin{tabular}[c]{l l l | l}
+        p & q & r & $((p \vee q) \wedge (\neg p \vee r))$ \\ \hline
+        T & T & T & T \\
+        T & T & F & F \\
+        T & F & T & T \\
+        T & F & F & F \\
+        F & T & T & T \\
+        F & T & F & T \\
+        F & F & T & F \\
+        F & F & F & F
+        \end{tabular}
+    }
+    \end{enumerate}
+\end{solution}
 
 %====================================================================================================
 \subsubsection{Exercise 3}
-Exercise 3
------------
+\question ...?
 
-a)
+\begin{parts}
+    \part ...? \missing{Exercise 3, part A}
+    \part Find a formula using only the connectives $\wedge$, $\vee$, and $\neg$ that is equivalent to $P + Q$.  Justify your answer with a truth table.
+\end{parts}
 
-    p q | p + q
-    T T | F
-    T F | T
-    F T | T
-    F F | F
+\uncertain{I'm not sure why this is ``$P$ + $Q$''}
 
-b)
-
-Find a formula using only the connectives ∧, ∨, and ¬ that is equiv-
-alent to P + Q. Justify your answer with a truth table.
-
-Now in the above truth table (3 (a)) see for which rows you are
-getting True and write down their logical connective:
-
-    (p ∧ ¬q) ∨ (¬p ∧ q)
-
-    p q | ((p & ~q) | (~p & q))
-    ---------------------------
-    T T | F
-    T F | T
-    F T | T
-    F F | F
+\begin{solution}
+    \begin{enumerate}[label=(\alph*)]
+        \item {
+            \begin{tabular}[c]{l l | l}
+            p & q & $p + q$ \\ \hline
+            T & T & F \\
+            T & F & T \\
+            F & T & T \\
+            F & F & F
+            \end{tabular}
+        }
+        
+        \item {
+            \begin{tabular}[c]{l l | l}
+                p & q & $((p \wedge \neg q) \vee (\neg p \wedge q))$ \\ \hline
+                T & T & F \\
+                T & F & T \\
+                F & T & T \\
+                F & F & F
+            \end{tabular}
+        }
+    \end{enumerate}
+\end{solution}
 
 %====================================================================================================
 \subsubsection{Exercise 4}
-Exercise 4
-----------
 
-    Find a formula using only the connectives ∧ and ¬ that is equivalent to
-    P ∨ Q. Justify your answer with a truth table.
+\question Find a formula using only the connectives $\wedge$ and $\neg$ that is equivalent to $P \vee Q$.  Justify your answer with a truth table.
 
-The truth table for `P v Q` follows like this:
+\begin{solution}
+        \begin{tabular}[c]{l l | l}
+            p & q & $P \vee Q$ \\ \hline
+            T & T & T \\
+            T & F & T \\
+            F & T & T \\
+            F & F & F
+        \end{tabular}
+    
+    From DeMorgan's Law: \\
+    $\neg( P \vee Q) \equiv \neg P \wedge \neg Q$ \\
+    $(P \vee Q) \equiv \neg(\neg \wedge \neg Q)$
+\end{solution}
 
-    p q | (p v q)
-    -------------
-    T T | T
-    T F | T
-    F T | T
-    F F | F
 
-From De-morgan's theorem:
-
-    ¬(P v Q) ≡ ¬P ∧ ¬Q
-    (P v Q) ≡ ¬(¬P ∧ ¬Q)
 
 %====================================================================================================
 \subsubsection{Exercise 5}
-Exercise 5
-----------
 
-(a)
+\question ...?
+\begin{parts}
+    \part ...
+    \part ...
+    \part  Find formulas using only the connective $\downarrow$ that are equivalent to $\neg P$,
+$P \vee Q$, and $P \wedge Q$.
+\end{parts}
 
-    p q | p ↓ q
-    T T | F
-    T F | F
-    F T | F
-    F F | T
+\begin{solution}
+    \begin{enumerate}[label=(\alph*)]
+        \item {
+            \begin{tabular}[c]{l l |l}
+            P & Q  & P $\downarrow Q$ \\ \hline
+            T & T & F \\
+            T & F & F \\
+            F & T & F \\
+            F & F & T
+            \end{tabular}
+            \text{Where $P \downarrow Q$ means neither P nor Q}
+        }
+        
+        \item {$\neg P \wedge \neg Q$}
+        
+        \item {
+            \begin{proof}
+                \begin{align*}
+                    P \downarrow P \\
+                    \neg (P \downarrow Q) \equiv (P \downarrow Q) \downarrow (P \downarrow Q) \\
+                    \neg P \downarrow \neg Q \equiv (P \downarrow P) \downarrow (Q \downarrow Q)
+                \end{align*}
+            \end{proof}
+        }
+    \end{enumerate}
+\end{solution}
+%(a) p q | p ↓ q
+%    T T | F
+%    T F | F
+%    F T | F
+%    F F | T
 
-(b)
-
-    ¬p ∧ ¬q
-
-(c)
-
-Find formulas using only the connective ↓ that are equivalent to ¬P,
-P ∨ Q, and P ∧ Q.
-
-    p ↓ p
-    ¬(p ↓ q) ≡ (p ↓ q) ↓ (p ↓ q)
-    ¬p ↓ ¬q  ≡ (p ↓ p) ↓ (q ↓ q)
+%(b) ¬p ∧ ¬q
+%(c) Find formulas using only the connective ↓ that are equivalent to ¬P,
+%P ∨ Q, and P ∧ Q.
+%    p ↓ p
+%    ¬(p ↓ q) ≡ (p ↓ q) ↓ (p ↓ q)
+%    ¬p ↓ ¬q  ≡ (p ↓ p) ↓ (q ↓ q)
 
 %====================================================================================================
 \subsubsection{Exercise 6}
-Exercise 6
-----------
-
-    Some mathematicians write P | Q to mean “P and Q are not both true.”
-    (This connective is called nand, and is used in the study of circuits in
-    computer science.)
-    (a) Make a truth table for P | Q.
-    (b) Find a formula using only the connectives ∧, ∨, and ¬ that is equiv-
-    alent to P | Q.
-    (c) Find formulas using only the connective | that are equivalent to ¬P,
-    P ∨ Q, and P ∧ Q.
-
-(a)
-
-    p q | p | q
-    T T | F
-    T F | T
-    F T | T
-    F F | T
-
-(b)
-
-One of these:
-
-    ¬(p ∧ q)         (p | q ≡ ¬(p ∧ q))
-    ¬p ∨ ¬q          (p | q ≡ ¬p ∨ ¬q)
-
-(c)
-
-    ¬p ≡ (p | p)
-    p ∨ q ≡ (¬p | ¬q) ≡ ((p | p) | (q | q))
-    p ∧ q ≡ ¬(p | q) ≡ (p | q) | (p | q)
-
-
+\question Some mathematicians write $P\; |\; Q$ to mean "$P$ and $Q$ are not both true,” or, $\neg (P \wedge Q)$.  (This connective is called NAND, and is used in the study of circuits in computer science.)
+    \begin{parts}
+        \part Make the truth table for $P | Q$
+        \part Using only $\wedge$, $\vee$, and $\neg$ derive a formula equivalent to $P\; |\; Q$
+        \part Using only $|$ derive formulas equivalent to: $\neg P$, $P \vee Q$, and $P \wedge Q$
+    \end{parts}
+    
+    \begin{solution}
+        \begin{enumerate}[label=(\alph*)]
+            \item {
+                \begin{tabular}[c]{l l | l}
+                    P & Q & $P\; |\; Q$ \\ \hline
+                    T & T & F \\
+                    T & F & T \\
+                    F & T & T \\
+                    F & F & T \\
+                \end{tabular}
+            }
+            
+            \item {
+                \begin{itemize}
+                    \item $(P\; |\; Q) \equiv \neg (P \wedge Q)$
+                    \item $(P\; |\; Q) \equiv \neg P \vee \neg Q$
+                \end{itemize}
+            }
+            
+            \item {
+                \begin{itemize}
+                    \item $\neg P \equiv (P\; |\; P)$ 
+                    \item $P \vee Q \equiv (\neg P\; |\; \neg Q) \equiv ((P\; |\; P)\; |\; (Q\; |\; Q)$
+                    \item $P \wedge Q \equiv \neg(P\; |\; Q) \equiv (P\; |\; Q)\; |\; (P\; |\; Q)$
+                \end{itemize}
+            }
+        \end{enumerate}
+    \end{solution}
 %====================================================================================================
 \subsubsection{Exercise 7}
-Exercise 7
------------
 
-    Use truth tables to determine whether or not the arguments in exercise 7
-    of Section 1.1 are valid.
+\question Use truth tables to determine whether or not the arguments in exercise 7 of Section 1.1 are valid.
 
-Take the conjunction of all the premises `¬(J ∧ P) ∧ (P ∨ C) ∧ J` and
-draw it's truth table.
+\begin{parts}
+    \part J:= Jane will win the math prize \\
+            P:= Pete will win the math prize \\
+            C:= Pete will win the chemistry prize\\
+            Draw the truth table for: $\neg (J \wedge P) \wedge (P\vee C)\wedge J$
+    \part B:= Beef will be the main course. \\
+            F:= Fish will be the main course. \\
+            P:= Peas will be the vegetable.\\
+            C:= Corn will be the vegetable. \\
+            Draw the truth table for: $(B \vee F)\wedge (P \vee C) \wedge \neg(F \wedge C)$
+    \part J:= John is telling the truth \\
+            B:= Bill is telling the truth\\
+            S:= Sam is telling the truth. \\
+            Draw the truth table for: $(J \vee B) \wedge (\neg S \vee \neg B)$
+            
+    \part S:= Sales will go up. \\
+            B:= Boss will be happy.\\
+            E:= Expenses will go up.\\
+            Draw the truth table for: $(S \wedge B) \vee (E \wedge \neg B)$
+\end{parts}
 
-    C J P | (~(J & P) & ((P | C) & J))
-    ----------------------------------
-    T T T | F
-    T T F | T
-    T F T | F
-    T F F | F
-    F T T | F
-    F T F | F
-    F F T | F
-    F F F | F
-
-where
-
-    J = Jane will win the math prize
-    P = Pete will win the math prize
-    C = Pete will win the chemistry prize.
-
-Now, the result is True when `C` and `J` are true. Hence the
-conclusion that Pete will win the chemistry prize is true.
-
-(b)
-
-Some symbols:
-
-    B = Beef will be the main course.
-    F = Fish will be the main course.
-    P = Peas will be the vegetable.
-    C = Corn will be the vegetable.
-
-Take the conjunction of all the premises `(B ∨ F) ∧ (P ∨ C) ∧ ¬(F ∧
-C)` and draw it's truth table:
-
-    B C F P | ((B | F) & ((P | C) & ~(F & C)))
-    ------------------------------------------
-    T T T T | F
-    T T T F | F
-    T T F T | T
-    T T F F | T
-    T F T T | T
-    T F T F | F
-    T F F T | T
-    T F F F | F
-    F T T T | F
-    F T T F | F
-    F T F T | F
-    F T F F | F
-    F F T T | T
-    F F T F | F
-    F F F T | F
-    F F F F | F
-
-Conclusion is `¬(B ∧ P)`:
-
-    B P | ~(B & P)
-    --------------
-    T T | F
-    T F | T
-    F T | T
-    F F | T
-
-The argument is invalid because `~(B & P)` is `F` when `B = T` and `P
-= T`. But in third row when `B = T` and `P = T` in conjunction of
-premise, it is `T`. To interpret it literally, they can have Beef as
-main course and Peas as the vegetable, but the conclusion of the
-statement says otherwise.
-
-(c)
-
-Symbols:
-
-    J = John is telling the truth.
-    B = Bill is telling the truth.
-    S = Sam is telling the truth.
-
-Premises:
-    J ∨ B
-    ¬S ∨ ¬B
-
-Conclusion:
-    J ∨ ¬S
-
-Conjunction of Premises: `(J ∨ B) ∧ (¬S ∨ ¬B)`
-
-    B J S | ((J | B) & (~S | ~B))
-    -----------------------------
-    T T T | F
-    T T F | T
-    T F T | F
-    T F F | T
-    F T T | T
-    F T F | T
-    F F T | F
-    F F F | F
-
-Conclusion truth table:
-
-    J S | (J | ~S)
-    --------------
-    T T | T
-    T F | T
-    F T | F
-    F F | T
-
-Whenever the conclusion truth table is `T`, for those parameters of
-`J` and `S`, the premises truth table is also true which implies that
-the conlusion is valid.
-
-(d)
-
-Symbols:
-
-    S = Sales will go up.
-    B = Boss will be happy.
-    E = Expenses will go up.
-
-Premises:
-    (S ∧ B) ∨ (E ∧ ¬B)
-
-Premise truth table:
-
-    B E S | ((S & B) | (E & ~B))
-    ----------------------------
-    T T T | T
-    T T F | F
-    T F T | T
-    T F F | F
-    F T T | T
-    F T F | T
-    F F T | F
-    F F F | F
-
-Conclusion:
-    ¬(S ∧ E)
-
-Conclusion truth table:
-
-    E S | ~(S & E)
-    --------------
-    T T | F
-    T F | T
-    F T | T
-    F F | T
-
-Argument is invalid because the according to the conclusion when `E =
-F` and `S = F`, the premise should be valid which is not the case.
+\begin{solution}
+    \begin{enumerate}[label=(\alph*)]
+        \item {
+            \begin{tabular}[c]{l l l | l}
+                C & J & P & $(\neg(J \wedge P) \wedge ((P \vee) \wedge J)$ \\ \hline
+                T & T & T & F \\
+                T & T & F & T \\
+                T & F & T & F \\
+                T & F & F & F \\
+                F & T & T & F \\
+                F & T & F & F \\
+                F & F & T & F \\
+                F & F & F & F \\
+            \end{tabular}
+            Now, the result is True when `C` and `J` are true. Hence the conclusion that Pete will win the chemistry prize is true.
+        }
+        
+        \item {
+            \begin{tabular}[c]{l l l l | l}
+                B & C & F & P & $((B \vee F) \wedge ((P \vee C) \wedge \neg(F \wedge C )))$ \\ \hline
+                T & T & T & T & F \\
+                T & T & T & F & F \\
+                T & T & F & T & T \\
+                T & T & F & F & T \\
+                T & F & T & T & T \\
+                T & F & T & F & F \\
+                T & F & F & T & T \\
+                T & F & F & F & F \\
+                F & T & T & T & F \\
+                F & T & T & F & F \\
+                F & T & F & T & F \\
+                F & T & F & F & F \\
+                F & F & T & T & T \\
+                F & F & T & F & F \\
+                F & F & F & T & F \\
+                F & F & F & F & F
+            \end{tabular}
+            \\
+            \textbf{Conclusion}: $\neg(B \wedge P)$:
+            \begin{tabular}[c]{l l | l}
+                B & P & $\neg(B \wedge P)$ \\ \hline
+                T & T & F \\
+                T & F & T \\
+                F & T & T \\
+                F & F & T
+            \end{tabular}
+            
+            The argument is invalid because $\neg(B \wedge P)$ is $F$ when $B = T$ and $P = T$. But in third row when $B = T$ and $P = T$ in conjunction of premise, it is $T$. To interpret it literally, they can have Beef as main course and Peas as the vegetable, but the conclusion of the statement says otherwise.
+        }
+        
+        \item {
+            \textbf{Premises}: \\
+                $J \vee B$ \\
+                $\neg S \vee \neg B$ \\
+            \textbf{Conclusion}: $J \vee \neg S$ \\
+            \textbf{Conjunction of Premises}: $(J \vee B) \wedge (\neg S \vee \neg B)$ \\
+        
+            \begin{tabular}[c]{l l l | l}
+            B & J & S & $((J \vee B) \wedge (\neg S \vee \neg B)$ \\ \hline
+            T & T & T & F \\
+            T & T & F & T \\
+            T & F & T & F \\
+            T & F & F & T \\
+            F & T & T & T \\
+            F & T & F & T \\
+            F & F & T & F \\
+            F & F & F & F
+            \end{tabular}
+            \\
+            Conclusion truth table: \\
+            \begin{tabular}[c]{l l | l}
+                J & S & $J \vee \neg S$ \\ \hline
+                T & T & T \\
+                T & F & T \\
+                F & T & F \\
+                F & F & T
+            \end{tabular}
+            
+            Whenever the conclusion truth table is $T$, for those parameters of $J$ and $S$, the premises truth table is also true which implies that the conclusion is valid.
+        }
+        \item {
+            \textbf{Premises}: $(S \wedge B) \vee (E \wedge \neg B)$
+            \begin{tabular}[c]{l l l | l }
+                B & E & S & $((S \wedge B) \vee (E \wedge \neg B))$ \\ \hline
+                T & T & T & T \\
+                T & T & F & F \\
+                T & F & T & T \\
+                T & F & F & F \\
+                F & T & T & T \\
+                F & T & F & T \\
+                F & F & T & F \\
+                F & F & F & F
+            \end{tabular}
+            \\
+            \textbf{Conclusion}: $(\neg S \wedge E)$ \\
+            \textbf{Conclusion truth table}:
+            \begin{tabular}[c]{l l | l}
+                E & S & $\neg (S \wedge E)$ \\ \hline
+                T & T & F \\
+                T & F & T \\
+                F & T & T \\
+                F & F & T
+            \end{tabular}
+            Argument is invalid because the according to the conclusion when $E = F$ and $S = F$, the premise should be valid which is not the case.
+        }
+    \end{enumerate}
+\end{solution}
 
 %====================================================================================================
 \subsubsection{Exercise 8}
-Exercise 8
-----------
 
-    Use truth tables to determine which of the following formulas are equiv-
-    alent to each other:
-    (a) (P ∧ Q) ∨ (¬P ∧ ¬Q).
-    (b) ¬P ∨ Q.
-    (c) (P ∨ ¬Q) ∧ (Q ∨ ¬P).
-    (d) ¬(P ∨ Q).
-    (e) (Q ∧ P) ∨ ¬P
-
-    P Q | ((P & Q) | (~P & ~Q))
-    ---------------------------
-    T T | T
-    T F | F
-    F T | F
-    F F | T
-
-    P Q | (~P | Q)
-    --------------
-    T T | T
-    T F | F
-    F T | T
-    F F | T
-
-    P Q | ((P | ~Q) & (Q | ~P))
-    ---------------------------
-    T T | T
-    T F | F
-    F T | F
-    F F | T
-
-    P Q | ~(P | Q)
-    --------------
-    T T | F
-    T F | F
-    F T | F
-    F F | T
-
-    P Q | ((Q & P) | ~P)
-    --------------------
-    T T | T
-    T F | F
-    F T | T
-    F F | T
-
-From the truth table `(a)` and `(c)` are equivalent to each other.
-Another thing that is equivalent is `(b)` and `(e)`.
+    \question  Use truth tables to determine which of the following formulas are equivalent to each other:
+    \begin{parts}
+        \part $(P \wedge Q) \vee (\neg P \wedge \neg Q)$
+        \part $\neg P \vee Q$
+        \part $(P \vee \neg Q) \wedge (Q \vee \neg P)$
+        \part $\neg(P \vee Q)$
+        \part $(Q \wedge P) \vee \neg P$
+    \end{parts}
+    
+    \begin{solution}
+        \begin{enumerate}[label=(\alph*)]
+            \item {
+                \begin{tabular}[c]{l l | l}
+                    P & Q & $((P \wedge Q) \vee (\neg P \wedge \neg Q))$ \\ \hline
+                    T & T & T \\
+                    T & F & F \\
+                    F & T & F \\
+                    F & F & T
+                \end{tabular}
+            }
+            \item {
+                \begin{tabular}[c]{l l | l}
+                    P & Q & $(\neg P \vee Q)$ \\ \hline
+                    T & T & T \\
+                    T & F & F \\
+                    F & T & T \\
+                    F & F & T
+                \end{tabular}
+            }
+            \item {
+                \begin{tabular}[c]{l l | l}
+                    P & Q & $((P \vee \neg Q) \wedge (Q \vee \neg P))$ \\ \hline
+                    T & T & T \\
+                    T & F & F \\
+                    F & T & F \\
+                    F & F & T
+                \end{tabular}
+            }
+            \item {
+                \begin{tabular}[c]{l l | l}
+                    P & Q & $\neg(P \vee Q)$ \\ \hline
+                    T & T & F \\
+                    T & F & F \\
+                    F & T & F \\
+                    F & F & T
+                \end{tabular}
+            }
+            \item {
+                \begin{tabular}[c]{l l | l}
+                    P & Q & $((Q \wedge P) \vee \neg P)$ \\ \hline
+                    T & T & T \\
+                    T & F & F \\
+                    F & T & T \\
+                    F & F & T
+                \end{tabular}
+            }
+        \end{enumerate}
+        From the truth table: (a) $\equiv$ (c) and (b) $\equiv$ (e).
+    \end{solution}
 
 %====================================================================================================
 \subsubsection{Exercise 9}
-Exercise 9
-----------
+\question Use truth tables to determine which of these statements are tautologies, which are contradictions, and which are neither:
+    \begin{parts}
+        \part $(P \vee Q) \wedge (\neg P \vee \neg Q)$
+        \part $(P \vee Q) \wedge (\neg P \wedge \neg Q)$
+        \part $(P \vee Q) \vee (\neg P \vee \neg Q)$
+        \part $[P \wedge (Q \vee \neg R)] \vee (\neg P \vee R)$
+    \end{parts}
 
-    Use truth tables to determine which of these statements are tautologies,
-    which are contradictions, and which are neither:
-    (a) (P ∨ Q) ∧ (¬P ∨ ¬Q).
-    (b) (P ∨ Q) ∧ (¬P ∧ ¬Q).
-    (c) (P ∨ Q) ∨ (¬P ∨ ¬Q).
-    (d) [P ∧ (Q ∨ ¬R)] ∨ (¬P ∨ R).
-
-Truth tables:
-
-    P Q | ((P | Q) & (~P | ~Q))
-    ---------------------------
-    T T | F
-    T F | T
-    F T | T
-    F F | F
-
-    P Q | ((P | Q) & (~P & ~Q))
-    ---------------------------
-    T T | F
-    T F | F
-    F T | F
-    F F | F
-
-    P Q | ((P | Q) | (~P | ~Q))
-    ---------------------------
-    T T | T
-    T F | T
-    F T | T
-    F F | T
-
-    P Q R | ((P & (Q | ~R)) | (~P | R))
-    -----------------------------------
-    T T T | T
-    T T F | T
-    T F T | T
-    T F F | T
-    F T T | T
-    F T F | T
-    F F T | T
-    F F F | T
-
-From the truth tables, `(b)` is contradiction. `(c)` and `(d)` are
-both tautologies. `(a)` is neither of them.
+    \begin{solution}
+        \begin{enumerate}[label=(\alph*)]
+            \item {
+                \begin{tabular}[c]{l l | l}
+                    P & Q & $((P \vee Q) \wedge (\neg P \vee \neg Q))$ \\ \hline
+                    T & T & F \\
+                    T & F & T \\
+                    F & T & T \\
+                    F & F & F
+                \end{tabular}
+            }
+            
+            \item {
+                \begin{tabular}[c]{l l | l}
+                    P & Q & $((P \vee Q) \wedge (\neg P \wedge \neg Q))$ \\ \hline
+                    T & T & F \\
+                    T & F & F \\
+                    F & T & F \\
+                    F & F & F
+                \end{tabular}
+            }
+            
+            \item {
+                \begin{tabular}[c]{l l | l}
+                    P & Q & $((P \vee Q) \vee (\neg P \vee \neg Q))$ \\ \hline
+                    T & T & T \\
+                    T & F & T \\
+                    F & T & T \\
+                    F & F & T
+                \end{tabular}
+            }
+            
+            \item {
+                \begin{tabular}[c]{l l l | l}
+                    P & Q & R & $((P \wedge (Q \vee \neg R)) \vee (\neg P \vee R))$ \\ \hline
+                    T & T & T & T \\
+                    T & T & F & T \\
+                    T & F & T & T \\
+                    T & F & F & T \\
+                    F & T & T & T \\
+                    F & T & F & T \\
+                    F & F & T & T \\
+                    F & F & F & T
+                \end{tabular}
+            }
+        \end{enumerate}
+        From the truth tables, (b) is \textit{contradiction}. (c) and (d) are both \textit{tautologies}. (a) is neither of them.
+    \end{solution}
 
 %====================================================================================================
 \subsubsection{Exercise 10}
-Exercise 10
------------
 
-The first was checked in text, so I will skip it.
-Distributive law: `P ∧ (Q ∨ R)` is equivalent to `(P ∧ Q) ∨ (P ∧ R)`
-
-    P Q R | (P & (Q | R))
-    ---------------------
-    T T T | T
-    T T F | T
-    T F T | T
-    T F F | F
-    F T T | F
-    F T F | F
-    F F T | F
-    F F F | F
-
-    P Q R | ((P & Q) | (P & R))
-    ---------------------------
-    T T T | T
-    T T F | T
-    T F T | T
-    T F F | F
-    F T T | F
-    F T F | F
-    F F T | F
-    F F F | F
-
-Duh, they are equivalent.
+\question The first was checked in text, so I will skip it.  Distributive law: $P \wedge (Q \vee R) \equiv (P \wedge Q( \vee (P \wedge R)$.
+    \begin{solution}
+        \begin{tabular}[c]{l l l | l}
+            P & Q & R & $P \wedge (Q \vee R)$ \\ \hline
+            T & T & T & T \\
+            T & T & F & T \\
+            T & F & T & T \\
+            T & F & F & F \\
+            F & T & T & F \\
+            F & T & F & F \\
+            F & F & T & F \\
+            F & F & F & F
+        \end{tabular}
+        
+        \begin{tabular}[c]{l l l | l}
+            P & Q & R & $((P \wedge Q) \vee (P \wedge R)$ \\ \hline
+            T & T & T & T \\
+            T & T & F & T \\
+            T & F & T & T \\
+            T & F & F & F \\
+            F & T & T & F \\
+            F & T & F & F \\
+            F & F & T & F \\
+            F & F & F & F
+        \end{tabular}
+        Yes, they are equivalent.
+    \end{solution}
 
 %====================================================================================================
 \subsubsection{Exercise 11}
-Exercise 11
-------------
+\question Use the laws stated in the text to find simpler formulas equivalent to these formulas. (See Examples 1.2.5 and 1.2.7.)
 
-    Use the laws stated in the text to find simpler formulas equivalent to these
-    formulas. (See Examples 1.2.5 and 1.2.7.)
-    (a) ¬(¬P ∧ ¬Q).
-    (b) (P ∧ Q) ∨ (P ∧ ¬Q).
-    (c) ¬(P ∧ ¬Q) ∨ (¬P ∧ Q).
+    \begin{parts}
+        \part $\neg(\neg P \wedge \neg Q)$
+        \part $(P\wedge Q) \vee (P \wedge \neg Q)$
+        \part $\neg(P \wedge \neg Q) \vee (\neg P \wedge Q)$
+    \end{parts}
+    
+    \begin{solution}
+        \begin{enumerate}[label=(\alph*)]
+            \item {
+                \begin{proof}
+                    \begin{align*}
+                        \neg(\neg P \wedge \neg Q) \\
+                        P \vee Q && \text{DeMorgan's law}
+                    \end{align*}
+                \end{proof}
+            }
+            
+            \item {
+                \begin{proof}
+                    \begin{align*}
+                        (P \wedge Q) \vee (P \wedge \neg Q) \\
+                        ((P \wedge Q) \vee P) \wedge ((P \wedge Q) \vee \neg Q) && \text{Distributive law} \\
+                        (P \vee (P \wedge Q)) \wedge (\neg Q \vee (P \wedge Q)) && \text{Associative law} \\
+                        P \wedge (( \neg Q \vee P) \wedge (\neg Q \vee Q)) && \text{Absorption law \& Distributive law} \\
+                        P \wedge (\neg Q \vee P) \\
+                        P && \text{Absorption law}
+                    \end{align*}
+                \end{proof}
+            }
+            
+            \item {
+                \begin{proof}
+                    \begin{align*}
+                        \neg(P \wedge \neg Q) \vee (\neg P \wedge Q) \\
+                        (\neg P \vee Q) \vee (\neg \wedge Q) && \text{DeMorgan's law} \\
+                        (\neg P \vee Q \vee \neg P) \wedge (\neg P \vee Q \vee Q) && \text{Distributive law} \\
+                        (\neg P \vee Q) \wedge (\neg P \vee Q) && \text{Idempotent law} \\
+                        (\neg P \vee Q) && \text{Idempotent law}
+                    \end{align*}
+                \end{proof}
+            }
+        \end{enumerate}
+    \end{solution}
+%(a) ¬(¬P ∧ ¬Q)
+%    => P ∨ Q    (Demorgan's law)
 
-(a)
+%(b) (P ∧ Q) ∨ (P ∧ ¬Q)
+%    => ((P ∧ Q) ∨ P) ∧ ((P ∧ Q) ∨ ¬Q)  [Distributive law]
+%    => (P ∨ (P ∧ Q)) ∧ (¬Q ∨ (P ∧ Q))  [Associative law]
+%    => P ∧ ((¬Q ∨ P) ∧ (¬Q ∨ Q)) [Absorption law & Distributive law]
+%    => P ∧ (¬Q ∨ P)
+%    => P [Absorption law]
 
-    ¬(¬P ∧ ¬Q)
-    => P ∨ Q    (Demorgan's law)
-
-(b)
-
-    (P ∧ Q) ∨ (P ∧ ¬Q)
-    => ((P ∧ Q) ∨ P) ∧ ((P ∧ Q) ∨ ¬Q)  [Distributive law]
-    => (P ∨ (P ∧ Q)) ∧ (¬Q ∨ (P ∧ Q))  [Associative law]
-    => P ∧ ((¬Q ∨ P) ∧ (¬Q ∨ Q)) [Absorption law & Distributive law]
-    => P ∧ (¬Q ∨ P)
-    => P [Absorption law]
-
-(c)
-
-    ¬(P ∧ ¬Q) ∨ (¬P ∧ Q)
-    => (¬P ∨ Q) ∨ (¬P ∧ Q) [Demorgan's law]
-    => (¬P ∨ Q ∨ ¬P) ∧ (¬P ∨ Q ∨ Q) [Distributive law]
-    => (¬P ∨ Q) ∧ (¬P ∨ Q) [Idempotent law]
-    => (¬P ∨ Q)  [Idempotent law]
+%(c) ¬(P ∧ ¬Q) ∨ (¬P ∧ Q)
+%    => (¬P ∨ Q) ∨ (¬P ∧ Q) [Demorgan's law]
+%    => (¬P ∨ Q ∨ ¬P) ∧ (¬P ∨ Q ∨ Q) [Distributive law]
+%    => (¬P ∨ Q) ∧ (¬P ∨ Q) [Idempotent law]
+%    => (¬P ∨ Q)  [Idempotent law]
 
 %====================================================================================================
 \subsubsection{Exercise 12}
-Exercise 12
-------------
 
-    Use the laws stated in the text to find simpler formulas equivalent to these
-    formulas. (See Examples 1.2.5 and 1.2.7.)
-    (a) ¬(¬P ∨ Q) ∨ (P ∧ ¬R).
-    (b) ¬(¬P ∧ Q) ∨ (P ∧ ¬R).
-    (c) (P ∧ R) ∨ [¬R ∧ (P ∨ Q)]
+\question Use the laws stated in the text to find simpler formulas equivalent to these formulas. (See Examples 1.2.5 and 1.2.7.)
 
-(a)
+\begin{parts}
+    \part $\neg (\neg P \vee Q) \vee (P \wedge \neg R)$
+    \part $\neg (\neg P \wedge Q) \vee (P \wedge \neg R)$
+    \part $(P \wedge R) \vee ([\neg R \wedge (P \vee Q)]$
+\end{parts}
+    
+    \begin{solution}
+        \begin{enumerate}[label=(\alph*)]
+            \item {
+                \begin{proof}
+                    \begin{align*}
+                        \neg(\neg P \vee Q) \vee (P \wedge \neg R) \\
+                        (\neg\neg P \wedge \neg Q) \vee (P \wedge \neg R) && \text{DeMorgan's law} \\
+                        (P \wedge \neg Q) \vee (P \wedge\neg R) && \text{Double Negation law} \\
+                        P \wedge (\neg Q \vee \neg R) && \text{Distributive law}
+                    \end{align*}
+                \end{proof}
+            }
+            
+            \item {
+                \begin{proof}
+                    \begin{align*}
+                        \neg(\neg P \wedge Q \vee (P \wedge \neg R) \\
+                        (\P \vee \neg Q) \vee (P \wedge \neg R) && \text{DeMorgan's law} \\
+                        (P \vee \neg \vee P( \wedge ( P \vee \neg \vee \neg R) && \text{Distributive law} \\
+                        (P \vee \neg Q) \wedge (P \vee \neg Q \vee \neg R) && \text{Idempotent law} \\
+                        (P \vee \neg Q) && \text{Absorption law}
+                    \end{align*}
+                \end{proof}
+            }
+            
+            \item {
+                \begin{proof}
+                    \begin{align*}
+                        (P \wedge R) \vee [\neg R \wedge (P \vee Q)] \\
+                        (P \wedge R) \vee (\neg R \wedge P) \wedge (\neg R \wedge Q) && \text{Distributive law} \\
+                        (P \wedge (R \vee \neg R)) \vee (\neg R \wedge Q) && \text{Distributive law} \\
+                        P \vee (\neg R \wedge Q)
+                    \end{align*}
+                \end{proof}
+            }
+        \end{enumerate}
+    \end{solution}
 
-    ¬(¬P ∨ Q) ∨ (P ∧ ¬R)
-    => (¬¬P ∧ ¬Q) ∨ (P ∧ ¬R) [Demorgan's law]
-    => (P ∧ ¬Q) ∨ (P ∧ ¬R) [Double Negation law]
-    => P ∧ (¬Q ∨ ¬R) [Distributive law]
+%(a) ¬(¬P ∨ Q) ∨ (P ∧ ¬R)
+%    => (¬¬P ∧ ¬Q) ∨ (P ∧ ¬R) [Demorgan's law]
+%    => (P ∧ ¬Q) ∨ (P ∧ ¬R) [Double Negation law]
+%    => P ∧ (¬Q ∨ ¬R) [Distributive law]
 
-(b)
+%(b) ¬(¬P ∧ Q) ∨ (P ∧ ¬R)
+%    => (P ∨ ¬Q) ∨ (P ∧ ¬R) [Demorgan's law]
+%    => (P ∨ ¬Q ∨ P) ∧ (P ∨ ¬Q ∨ ¬R) [Distributive law]
+%    => (P v ¬Q) ∧ (P ∨ ¬Q ∨ ¬R) [Idempotent law]
+%    => (P v ¬Q) [Absorption law]
 
-    ¬(¬P ∧ Q) ∨ (P ∧ ¬R)
-    => (P ∨ ¬Q) ∨ (P ∧ ¬R) [Demorgan's law]
-    => (P ∨ ¬Q ∨ P) ∧ (P ∨ ¬Q ∨ ¬R) [Distributive law]
-    => (P v ¬Q) ∧ (P ∨ ¬Q ∨ ¬R) [Idempotent law]
-    => (P v ¬Q) [Absorption law]
-
-(c)
-
-    (P ∧ R) ∨ [¬R ∧ (P ∨ Q)]
-    => (P ∧ R) ∨ (¬R ∧ P) ∨ (¬R ∧ Q) [Distributive law]
-    => (P ∧ (R ∨ ¬R)) ∨ (¬R ∧ Q) [Distributive law]
-    => P ∨ (¬R ∧ Q)
+%(c) (P ∧ R) ∨ [¬R ∧ (P ∨ Q)]
+%    => (P ∧ R) ∨ (¬R ∧ P) ∨ (¬R ∧ Q) [Distributive law]
+%    => (P ∧ (R ∨ ¬R)) ∨ (¬R ∧ Q) [Distributive law]
+%    => P ∨ (¬R ∧ Q)
 
 %====================================================================================================
 \subsubsection{Exercise 13}
-Exercise 13
-------------
-
-    Use the first DeMorgan’s law and the double negation law to derive the
-    second DeMorgan’s law.
-
-Firt Demorgan's law: `¬(P ∧ Q) is equivalent to ¬P ∨ ¬Q`
-Second Demorgan's law: `¬(P ∨ Q) is equivalent to ¬P ∧ ¬Q`
-
-    ¬(P ∨ Q) [LHS of second demorgan's law]
-    => ¬(¬¬P ∨ ¬¬Q) [Double negation]
-    => ¬(¬(¬P ∧ ¬Q)) [Demorgan's first law]
-    => (¬P ∧ ¬Q) [RHS of second demorgan's law]
+    \question Use the first DeMorgan’s law and the double negation law to derive the second DeMorgan’s law. \\
+    First DeMorgan's law: $\neg (P \wedge Q) \equiv \neg P \vee \neg Q$ \\
+    Second DeMorgan's law: $\neg (P \vee Q) \equiv \neg P \wedge \neg Q$
+    \begin{solution}
+    \begin{proof}
+            \begin{align*}
+                \neg(P \vee Q) && \text{Left-hand side of DeMorgan's law} \\
+                \neg(\neg\neg P \vee \neg\neg Q) && \text{Double Negation} \\
+                \neg(\neg(\neg P \wedge \neg Q)) && \text{DeMorgan's first law} \\
+                (\neg P \wedge \neg Q) && \text{Right-hand side of second DeMorgan's law}
+            \end{align*}
+        \end{proof}
+    \end{solution}
+    %¬(P ∨ Q) [LHS of second DeMorgan's law]
+    %=> ¬(¬¬P ∨ ¬¬Q) [Double negation]
+    %=> ¬(¬(¬P ∧ ¬Q)) [DeMorgan's first law]
+    %=> (¬P ∧ ¬Q) [RHS of second DeMorgan's law]
 
 %====================================================================================================
 \subsubsection{Exercise 14}
 Exercise 14
 -----------
+\question Use associative laws to show that:
+    $[P \wedge (Q \wedge R)] \wedge S \equiv (P \wedge Q) \wedge (R wedge S)$
+    Note that the associative laws say only that parentheses are unnecessary when combining three statements with $\wedge$ or $\vee$. In fact, these laws can be used to justify leaving parentheses out when more than three statements are combined. 
 
-    Note that the associative laws say only that parentheses are unnecessary
-    when combining three statements with ∧ or ∨. In fact, these laws can be
-    used to justify leaving parentheses out when more than three statements
-    are combined. Use associative laws to show that [P ∧ (Q ∧ R)] ∧ S is
-    equivalent to (P ∧ Q) ∧ (R ∧ S).
+\begin{solution}
+    \begin{align*}
+        [P \wedge (Q \wedge R)] \wedge S \Rightarrow ((P \wedge Q) \wedge R) \wedge S \Rightarrow (P \wedge Q) \wedge (R \wedge S)
+    \end{align*}
+\end{solution}
 
-So, the solution goes like this:
-
-    [P ∧ (Q ∧ R)] ∧ S
-    => ((P ∧ Q) ∧ R) ∧ S
-    => (P ∧ Q) ∧ (R ∧ S)
+    %[P ∧ (Q ∧ R)] ∧ S
+    %=> ((P ∧ Q) ∧ R) ∧ S
+    %=> (P ∧ Q) ∧ (R ∧ S)
 
 %====================================================================================================
 \subsubsection{Exercise 15}
-Exercise 15
------------
-
-That's easy: 2^n
+\question ....
+\begin{solution}
+    $2^n$
+\end{solution}
 
 %====================================================================================================
 \subsubsection{Exercise 16}
-Exercise 16
------------
+\question Let's take conjugate of all the rows where it is true and then take the disjunctions of them. Or more simpler way would be to take conjugate of where it is false and inverse them in this case:
 
-Let's take conjugate of all the rows where it is true and then take
-the disjunctions of them. Or more simpler way would be to take
-conjugate of where it is false and inverse them in this case:
-
-    ¬(¬P ∧ Q)
-    => P ∨ ¬Q
+    \begin{solution}
+        \begin{align*}
+            \neg(\neg P \wedge Q) \Rightarrow P \vee \neg Q
+        \end{align*}
+    \end{solution}
+    %¬(¬P ∧ Q)
+    %=> P ∨ ¬Q
 
 %====================================================================================================
 \subsubsection{Exercise 17}
-Exercise 17
------------
 
-Solve using the same strategy as above:
+\question Solve using the same strategy as above:
 
-    (¬P ∧ Q) ∨ (P ∧ ¬Q)
-    => ((¬P ∧ Q) ∨ P) ∧ ((¬P ∧ Q) ∨ ¬Q)
-    => (P ∨ Q) ∧ (¬P ∨ ¬Q)
+\begin{solution}
+    \begin{align*}
+        (\neg P \wedge Q) \vee (P \wedge \neg Q) \Rightarrow ((\neg P \wedge Q) \vee P) \wedge (( \neg P \wedge Q) \vee \neg Q) \Rightarrow (P \vee Q) \wedge (\neg Q \vee \neg Q)
+    \end{align*}
+\end{solution}
+    
+    %(¬P ∧ Q) ∨ (P ∧ ¬Q)
+    %=> ((¬P ∧ Q) ∨ P) ∧ ((¬P ∧ Q) ∨ ¬Q)
+    %=> (P ∨ Q) ∧ (¬P ∨ ¬Q)
 
 %====================================================================================================
 \subsubsection{Exercise 18}
-Exercise 18
------------
 
-    Suppose the conclusion of an argument is a tautology. What can you
-    conclude about the validity of the argument? What if the conclusion is
-    a contradiction? What if one of the premises is either a tautology or a
-    contradiction?
+    \question Suppose the conclusion of an argument is a tautology.
+    \begin{parts}
+        \part  What can you conclude about the validity of the argument?
+        \part What if the conclusion is a contradiction?
+        \part What if one of the premises is either a tautology or a contradiction?
+    \end{parts}
 
-If the conclusion of an argument is a tautology, then no matter what
-the condition of the premise it is true for all the cases. Ain't that
-wonderful! Similarly if the conclusion is a contradiction, then no
-matter what the condition of the premises it is false for all the
-cases. How prejudiced it is! We cannot say anything about the validity
-of the argument in this case.
-
-What if one of the premises is either a tautology or a contradiction?
-Doesn't really matter as the conclusion of an argument is an
-tautology.
+    \begin{solution}
+        \begin{enumerate}[label=(\alph*)]
+            \item If the conclusion of an argument is a tautology, then no matter what the condition of the premise it is true for all the cases.
+            
+            \item Similarly if the conclusion is a contradiction, then no matter what the condition of the premises it is false for all the cases.
+            
+            \item Doesn't really matter as the conclusion of an argument is an tautology.
+        \end{enumerate}
+    \end{solution}

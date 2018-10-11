@@ -1,13 +1,28 @@
 \documentclass{exam}
 \usepackage{graphicx}
 \usepackage{verbatim}
+\usepackage{tabularx}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{listings}
 \usepackage{answers}
 \usepackage{enumitem}
+\usepackage{xcolor}  % Coloured text etc.
+\usepackage{xargs}                      % Use more than one optional parameter in a new commands (newcommandx)
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
 \usepackage{url}
+
+\newtheorem{theorem}{Theorem}  
+\newtheorem{lemma}{Lemma}  
+
+\newcommandx{\uncertain}[2][1=]{\todo[linecolor=orange,backgroundcolor=yellow!25,bordercolor=orange,#1]{#2}}
+\newcommandx{\uncertaini}[2][1=]{\todo[linecolor=orange,backgroundcolor=yellow!25,bordercolor=orange,inline,#1]{#2}}
+\newcommandx{\wrong}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+\newcommandx{\wrongi}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,inline,#1]{#2}}
+\newcommandx{\missing}[2][1=]{\todo[linecolor=green,backgroundcolor=green!25,bordercolor=green,#1]{#2}}
+\newcommandx{\missingi}[2][1=]{\todo[linecolor=greeb,backgroundcolor=green!25,bordercolor=green,inline,#1]{#2}}
 
 \begin{document}
 \printanswers
@@ -19,6 +34,7 @@
 
 \tableofcontents
 
+\begin{questions}
 %\input{introduction/main.tex}
 \input{chapter1/main.tex}
 \input{chapter2/main.tex}
@@ -26,5 +42,6 @@
 %\input{chapter4/main.tex}
 %\input{chapter5/main.tex}
 %\input{chapter6/main.tex}
+\end{questions}
 
 \end{document}
